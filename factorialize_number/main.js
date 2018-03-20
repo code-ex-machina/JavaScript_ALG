@@ -40,3 +40,20 @@ function factorialize1(num) {
 }
 
 console.log(factorialize1(5));
+
+// Setting let answer be global withing a function
+function factorialize2(num) {
+  let answer2 = 1;
+  innerFunc(num);
+  function innerFunc(input) {
+    answer2 *= num;
+    num--;
+    if (num > 1) {
+      innerFunc(num);
+    }
+  }
+  return answer2;
+}
+
+console.log(factorialize2(5));
+
