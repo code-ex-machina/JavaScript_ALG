@@ -31,6 +31,9 @@ console.log(factorialize(5));
 // Using Recursion
 let answer1 = 1;
 function factorialize1(num) {
+  if (num === 0){
+    return answer1;
+  }
   answer1 *= num;
   num--;
   if (num > 1) {
@@ -46,6 +49,9 @@ function factorialize2(num) {
   let answer2 = 1;
   innerFunc(num);
   function innerFunc(input) {
+    if (input === 0){
+      return answer2;
+    }
     answer2 *= num;
     num--;
     if (num > 1) {
