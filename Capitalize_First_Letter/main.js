@@ -19,7 +19,9 @@ console.log(titleCase('i would like to work for google'));
 
 // Shorter
 function capitalize(str){
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  return str.toLowerCase().split(' ').map(function(word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(' ');
 }
 
 console.log(capitalize('i am a coding machine'));
